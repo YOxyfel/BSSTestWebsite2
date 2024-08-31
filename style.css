@@ -1416,4 +1416,120 @@ p
   {
     font-size: clamp(1.3rem, 1vw, 1.8rem);
   }
+
+  .box
+  {
+    width: 40px;
+    height: 35px;
+  }
+  
+  .box-container
+  {
+    gap: 3%;
+  }
+
+
+}
+
+/* Large Desktop 2 */
+@media (min-width: 1650px) {
+  .search-bar
+  {
+    & input
+    {
+      font-size: max(0.8vw, 0.85vw);
+    }
+
+    & button p
+    {
+      font-size: max(0.8vw, 0.85vw);
+    }
+  }
+
+  .buttons button > p
+  {
+    font-size: clamp(1.3rem, 1vw, 1.8rem);
+  }
+
+  .box
+  {
+    width: 45px;
+    height: 40px;
+  }
+  
+  .box-container
+  {
+    gap: 0.4rem;
+  }
+
+
+}
+@media (min-width: 2000px) {
+  .search-bar
+  {
+    & input
+    {
+      font-size: max(0.8vw, 0.85vw);
+    }
+
+    & button p
+    {
+      font-size: max(0.8vw, 0.85vw);
+    }
+  }
+
+  .buttons button > p
+  {
+    font-size: clamp(1.3rem, 1vw, 1.8rem);
+  }
+
+  .box
+  {
+    width: 50px;
+    height: 45px;
+  }
+  
+  .box-container
+  {
+    gap: 0.7rem;
+  }
+
+}
+
+@media (min-width: 2400px) {
+  .search-bar
+  {
+    & input
+    {
+      font-size: max(0.8vw, 0.85vw);
+    }
+
+    & button p
+    {
+      font-size: max(0.8vw, 0.85vw);
+    }
+  }
+
+  .buttons button > p
+  {
+    font-size: clamp(1.3rem, 1vw, 1.8rem);
+  }
+
+  .box
+  {
+    width: 55px;
+    height: 50px;
+
+    & p
+    {
+      font-size: 30px;
+    }
+  }
+  
+  .box-container
+  {
+    gap: 1rem;
+  }
+
+
 }

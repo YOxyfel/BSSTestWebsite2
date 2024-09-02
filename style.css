@@ -1443,7 +1443,7 @@ p
 
   .left-box, .right-box, .middle-box
   {
-    min-height: 300px;
+    min-height: 350px;
     min-width: 250px;
   }
 
@@ -1495,6 +1495,11 @@ p
     font-size: clamp(1.3rem, 1vw, 1.8rem);
   }
 
+  .left-box, .right-box, .middle-box
+  {
+    min-height: 350px;
+    min-width: 250px;
+  }
   .box
   {
     width: 45px;
@@ -1536,6 +1541,11 @@ p
   .box-container
   {
     gap: 0.7rem;
+  }
+  .left-box, .right-box, .middle-box
+  {
+    min-height: 350px;
+    min-width: 250px;
   }
 
 }

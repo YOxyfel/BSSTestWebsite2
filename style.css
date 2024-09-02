@@ -284,7 +284,6 @@ main
 .layouts
 {
   display:flex;
-  width:50%;
   height:100%;
   flex-direction: row;
   align-items:center;
@@ -556,7 +555,7 @@ p
 .right-box, .left-box, .middle-box
 {
   min-height: 300px;
-  min-width: 250px;
+  min-width: 350px;
 }
 
 .search-bar {
@@ -1444,7 +1443,7 @@ p
   .left-box, .right-box, .middle-box
   {
     min-height: 350px;
-    min-width: 250px;
+    min-width: 350px !important;
   }
 
   .value-background

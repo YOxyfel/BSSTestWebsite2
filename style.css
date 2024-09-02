@@ -1443,7 +1443,7 @@ p
 
   .left-box, .right-box, .middle-box
   {
-    min-height: 350px;
+    min-height: 300px;
     min-width: 250px;
   }
 
@@ -1451,8 +1451,12 @@ p
   {
     min-height: 60%;
     max-height: 50px;
+    
   }
-
+  .value
+  {
+    width: 100% !important;
+  }
   .box
   {
     width: 40px;

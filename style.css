@@ -12,6 +12,11 @@ body
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 
@@ -328,7 +333,7 @@ main
   flex-direction: row;
   height:15%;
   justify-content: space-around;
-  border-top: 1px solid black;
+  border-top: 3px solid rgb(60, 169, 107);
 }
 .middle-box
 {
@@ -413,7 +418,16 @@ main
 
 .result
 {
+  display: flex;
   height: 75%;
+  min-height: 500px;
+  align-content: flex-start;
+  overflow-y: scroll;
+
+  flex-direction: row;
+
+  
+  flex-wrap: wrap;
 }
 
 .the-rest
@@ -519,13 +533,6 @@ button.chat
   justify-content: center;
   align-items: center;
 }
-.stickers
-{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 85%;
-}
 
 
 #switchButtonLeft, #switchButtonRight
@@ -570,19 +577,41 @@ p
 
 .stickers
 {
-  padding: 25px;
-  gap: 1rem;
   align-content: flex-start;
   overflow-y: scroll;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.stickers::before
+{
+  position: sticky;
+  content: '';
+  background: linear-gradient(to bottom, rgb(44, 143, 86), rgba(0, 0, 0, 0));
+  width: 100%;
+  left:0;
+  top: 0;
+  height: 30px;
+  margin-bottom: -30px;
 }
 
 .sticker-container
 {
+  margin: 15px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 20%;
+  min-width: 110px;
+  cursor: grab;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
 }
 
 .sticker-img
@@ -608,7 +637,6 @@ p
 .sticker-header
 {
   height: auto;
-  border-bottom: 1px solid black;
   text-align: center;
   & p
   {
@@ -616,6 +644,31 @@ p
     font-weight: 700;
   }
 }
+
+.dragging {
+  opacity: 0.9; /* Makes the element semi-transparent */
+  animation: heartbeat 2s infinite ease-in-out; 
+}
+
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }          /* Normal size */
+  20% { transform: scale(1.2); }       /* Quick scale up */
+  40% { transform: scale(1); }         /* Back to normal size */
+  60% { transform: scale(1.1); }       /* Smaller pulse up */
+  100% { transform: scale(1); }        /* Back to normal */
+}
+
+.splashing {
+  animation: splash 0.5s forwards; /* Splash animation on drop */
+}
+
+@keyframes splash {
+  0% { transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }         /* Start normal size */
+  50% { transform: scale(1.1);box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); }    /* Grow and fade slightly */
+  100% { transform: scale(1); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }       /* Fully grow and fade out */
+}
+
 
 /* Phone (portrait) */
 @media (max-width: 480px) {
@@ -1633,6 +1686,4 @@ p
   {
     gap: 1rem;
   }
-
-
 }

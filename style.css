@@ -606,12 +606,12 @@ p
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20%;
+  height: auto;
   min-width: 110px;
   cursor: grab;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .sticker-img
